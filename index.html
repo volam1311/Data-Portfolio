@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="SQL, Python, and case studies that end in a decision you can check.">
+  <meta name="theme-color" content="#f5f7fa">
+  <title>Phuc Lam Vo</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">PLV</span>
+        <span class="brand-name">Phuc Lam Vo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav id="site-nav" class="nav-panel" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#background">Background</a>
+        <a href="#skills">Skills</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <section class="hero">
+      <div class="wrap hero-copy">
+        <div class="hero-title">
+          <h1>Phuc Lam Vo</h1>
+          <p class="display">Decisions from a table, and models you can check</p>
+        </div>
+          <p class="lede">I am a second-year Computer Science and Data Science student at Queensland University of Technology. Give me a table and I will query it, test one question, and write down the action. If a model is the right tool, I show the baseline it beat and which rows it would change.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View case studies</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
+        </div>
+        <p class="availability">Open to internships</p>
+      </div>
+    </section>
+
+
+
+
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="index">01</p>
+          <div>
+            <h2>Case studies</h2>
+          </div>
+        </header>
+        <div class="projects-toolbar">
+          <div class="filters" role="group" aria-label="Filter case studies">
+            <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter" type="button" data-filter="sql" aria-pressed="false">SQL</button>
+            <button class="filter" type="button" data-filter="python" aria-pressed="false">Python</button>
+            <button class="filter" type="button" data-filter="visual" aria-pressed="false">Visuals</button>
+            <button class="filter" type="button" data-filter="r" aria-pressed="false">R</button>
+          </div>
+          <p id="project-count" aria-live="polite">Showing 4 studies</p>
+        </div>
+        <div class="project-list">
+          <article class="project" data-tags="python visual">
+            <p class="kicker">Python · scikit-learn</p>
+            <h3>Who should Sydney Bank call first?</h3>
+            <p>Ranked 1,600 customers by churn risk so a retention team could spend one list on people who already look like those who left.</p>
+            <dl class="kpis">
+              <div>
+                <dt>Base rate</dt>
+                <dd>18.6%</dd>
+              </div>
+              <div>
+                <dt>Top 10%</dt>
+                <dd>59%</dd>
+              </div>
+              <div>
+                <dt>Lift</dt>
+                <dd>3.2×</dd>
+              </div>
+            </dl>
+            <div class="case case-links">
+              <a class="case-link" href="https://github.com/volam1311/Sydney-Bank-Churn-Prediction" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project" data-tags="visual">
+            <p class="kicker">Power BI · DAX</p>
+            <h3>Which pizzas were carrying the menu?</h3>
+            <p>One year of orders for a pizza restaurant, modelled in Power BI, to see what to keep, what to review, and when the kitchen is busy.</p>
+            <dl class="kpis">
+              <div>
+                <dt>Revenue</dt>
+                <dd>$818K</dd>
+              </div>
+              <div>
+                <dt>Orders</dt>
+                <dd>21.35K</dd>
+              </div>
+              <div>
+                <dt>XL and XXL</dt>
+                <dd>&lt;$10K</dd>
+              </div>
+            </dl>
+            <div class="case case-links">
+              <a class="case-link" href="https://github.com/volam1311/Pizza-Sales-Analysis" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project" data-tags="python sql visual">
+            <p class="kicker">Python · dbt · Power BI</p>
+            <h3>Where did movie profit actually sit?</h3>
+            <p>An ELT pipeline from the TMDB API into DuckDB and Databricks, then a Power BI report on 9,672 films released since 2018.</p>
+            <dl class="kpis">
+              <div>
+                <dt>Films</dt>
+                <dd>9,672</dd>
+              </div>
+              <div>
+                <dt>Profit</dt>
+                <dd>$118bn</dd>
+              </div>
+              <div>
+                <dt>ROI</dt>
+                <dd>168%</dd>
+              </div>
+            </dl>
+            <div class="case case-links">
+              <a class="case-link" href="https://github.com/volam1311/Movie-Analysis" rel="noopener">GitHub</a>
+              <a class="case-link" href="https://app.powerbi.com/view?r=eyJrIjoiY2UyYzdlYjMtZWRmMy00ZTU4LTgyZTEtZjM1YWY1MTcwNmUxIiwidCI6ImVhNWI1ODBhLTIzMmEtNGUwNy05ZTJkLThjNjIwMGMxZDVmNCJ9" rel="noopener">Live dashboard</a>
+            </div>
+          </article>
+
+          <article class="project" data-tags="r visual">
+            <p class="kicker">R · regressionmodelling</p>
+            <h3>Which cup keeps hot water hot?</h3>
+            <p>A balanced experiment on cup type, lid, and fill volume, modelled in R, to see what actually slows heat loss over five minutes.</p>
+            <dl class="kpis">
+              <div>
+                <dt>Paper vs ceramic</dt>
+                <dd>−8°C</dd>
+              </div>
+              <div>
+                <dt>No lid</dt>
+                <dd>+4.5°C</dd>
+              </div>
+              <div>
+                <dt>Variance fit</dt>
+                <dd>99.8%</dd>
+              </div>
+            </dl>
+            <div class="case case-links">
+              <a class="case-link" href="https://github.com/volam1311/Water-Temperature-Analyzer" rel="noopener">GitHub</a>
+            </div>
+          </article>
+        </div>
+        <p id="project-empty" class="empty" hidden>No case studies in this group.</p>
+      </div>
+    </section>
+    <section class="section" id="background">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="index">02</p>
+          <div>
+            <h2>Work and education</h2>
+          </div>
+        </header>
+        <div class="record">
+          <div class="record-notes">
+            <p class="kicker record-label">Work</p>
+            <article>
+              <p class="when">June – Aug 2026</p>
+              <h3>Mid-year research</h3>
+              <p>MYRES participant at QUT. A supervised Faculty of Science project run beside the degree.</p>
+            </article>
+            <article>
+              <p class="when">Oct 2025 – Feb 2026</p>
+              <h3>Vacation research</h3>
+              <p>Research student on QUT’s Vacation Research Experience Scheme with MACSYS. Supervised by Professor Chris Drovandi, on statistics and biology.</p>
+            </article>
+          </div>
+          <article class="record-degree">
+            <p class="kicker">Education</p>
+            <h3>Bachelor of Information Technology</h3>
+            <p>Queensland University of Technology, 2025–2028. Majors in Computer Science and Data Science.</p>
+            <dl class="kpis">
+              <div>
+                <dt>GPA out of 7</dt>
+                <dd>6.938</dd>
+              </div>
+              <div>
+                <dt>WAM out of 100</dt>
+                <dd>90.625</dd>
+              </div>
+            </dl>
+            <p>Executive Deans' Commendation for Academic Excellence in Semester 1 2025, Semester 2 2025, and Semester 1 2026.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="skills">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="index">03</p>
+          <div>
+            <h2>Skills</h2>
+            <p class="lede">Tools from the case studies, plus languages from the degree</p>
+          </div>
+        </header>
+        <div class="skill-grid">
+          <article class="skill">
+            <h3>Visualisation tools</h3>
+            <p>Put one result in a chart or a dashboard someone can check.</p>
+            <ul class="chips">
+              <li>Tableau</li>
+              <li>Power BI</li>
+              <li>matplotlib</li>
+              <li>ggplot2</li>
+            </ul>
+          </article>
+          <article class="skill">
+            <h3>Languages</h3>
+            <p>Query a table, run the analysis, and write the program around it.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>R</li>
+              <li>JavaScript</li>
+              <li>Java</li>
+              <li>C#</li>
+            </ul>
+          </article>
+          <article class="skill">
+            <h3>Machine learning</h3>
+            <p>Train a model, then keep it only if it beats a baseline.</p>
+            <ul class="chips">
+              <li>scikit-learn</li>
+              <li>PyTorch</li>
+              <li>Hugging Face</li>
+              <li>OpenAI API</li>
+            </ul>
+          </article>
+          <article class="skill">
+            <h3>Other tools</h3>
+            <p>Clean the rows, store them, and keep every step in version control.</p>
+            <ul class="chips">
+              <li>pandas</li>
+              <li>NumPy</li>
+              <li>Excel</li>
+              <li>Power Query</li>
+              <li>DuckDB</li>
+              <li>dbt</li>
+              <li>Databricks</li>
+              <li>Git</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section band" id="approach">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="index">04</p>
+          <div>
+            <h2>How I work a question</h2>
+          </div>
+        </header>
+        <ol class="steps">
+          <li>
+            <span class="step-num">01</span>
+            <h3>Frame</h3>
+            <p>Write the decision the chart is supposed to change.</p>
+          </li>
+          <li>
+            <span class="step-num">02</span>
+            <h3>Audit</h3>
+            <p>Check grain, duplicates, missingness, and what one row actually means.</p>
+          </li>
+          <li>
+            <span class="step-num">03</span>
+            <h3>Analyse</h3>
+            <p>Start with a baseline, then one comparison that could overturn it.</p>
+          </li>
+          <li>
+            <span class="step-num">04</span>
+            <h3>Show</h3>
+            <p>One claim per chart, with the unit, the window, and the sample.</p>
+          </li>
+          <li>
+            <span class="step-num">05</span>
+            <h3>Recommend</h3>
+            <p>Say what to try next, and what result would prove you wrong.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <header class="section-head">
+            <p class="index">05</p>
+            <div>
+              <h2>Contact</h2>
+            </div>
+          </header>
+          <ul class="contact-list">
+            <li>
+              <span>Email</span>
+              <a id="email-link" href="mailto:vophuclam1311@gmail.com">vophuclam1311@gmail.com</a>
+            </li>
+            <li>
+              <span>LinkedIn</span>
+              <a href="https://www.linkedin.com/in/phuc-lam-vo-281034336/" rel="noopener">LinkedIn Profile</a>
+            </li>
+            <li>
+              <span>Based</span>
+              <strong>Brisbane, VietNam</strong>
+            </li>
+            <li>
+              <span>Status</span>
+              <strong>Open to internships</strong>
+            </li>
+          </ul>
+        </div>
+        <form class="form-card" id="contact-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+          <p id="form-status" class="form-status" role="status" hidden></p>
+          <div class="hp" aria-hidden="true">
+            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name <span class="req">(required)</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <p class="field-error" id="name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">(required)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <p class="field-error" id="email-error" hidden></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="org">Organisation <span class="req">(optional)</span></label>
+            <input id="org" name="org" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="message">Message <span class="req">(required)</span></label>
+            <textarea id="message" name="message" rows="6" required placeholder="The decision you are trying to make, the data you have, and the timing."></textarea>
+            <p class="field-error" id="message-error" hidden></p>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-hint">This opens your email app with the message filled in. Nothing is stored on a server.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> <span class="brand-name">Phuc Lam Vo</span> · Portfolio</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+  <noscript>
+    <p class="noscript">Project filters need JavaScript. Case studies, skills, and contact details stay readable without it.</p>
+  </noscript>
+</body>
+</html>
