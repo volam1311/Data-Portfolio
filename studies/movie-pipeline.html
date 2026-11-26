@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="A weekly TMDB pipeline that turns missing budgets into nulls, and reads profit from the 2020 drop.">
+  <meta name="theme-color" content="#f5f7fa">
+  <title>Where did movie profit actually sit? · Phuc Lam Vo</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">PLV</span>
+        <span class="brand-name">Phuc Lam Vo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav id="site-nav" class="nav-panel" aria-label="Primary">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#background">Background</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content" class="section" tabindex="-1">
+    <div class="wrap">
+      <a class="back-link" href="../index.html#projects">All case studies</a>
+      <article class="study">
+        <header class="study-head">
+          <p class="kicker">SQL · dbt · Python · Power BI</p>
+          <h1>Where did movie profit actually sit?</h1>
+          <p>A weekly pipeline from the TMDB API into DuckDB, through dbt, and out to Databricks, feeding a Power BI report on films released since 1 January 2018. The question is which money figure is safe to publish once missing budgets are taken out.</p>
+        </header>
+        <figure class="study-figure">
+          <img src="../assets/figures/movies-profit.png" width="1647" height="928" alt="Budget and revenue dashboard. Year bars collapse in 2020. The profit line falls from about $23bn to about $2bn. The ROI table is led by micro-budget titles.">
+          <figcaption>Profit by year is the chart to read: about $22bn in 2018, $23bn in 2019, $2bn in 2020, then a climb back. The ROI table underneath is a different question, and a worse one. Obsession and Animal World lead it on budgets under $1M.</figcaption>
+        </figure>
+        <ol class="method">
+          <li>
+            <h3>Frame</h3>
+            <p>Decide whether a profit total or an ROI ranking can go on the page, and what 2020 actually did to the business, once a missing figure is no longer stored as zero.</p>
+          </li>
+          <li>
+            <h3>Audit</h3>
+            <p>TMDB writes a missing budget or revenue as 0. Staging turns those zeros into null, and a dbt test blocks the Databricks publish if a zero budget or revenue is still in staging. Profit is revenue minus budget, and ROI is profit divided by budget. Both stay null unless both money fields are known, so the $118bn profit is the both-known subset. It is a different total from $207bn of reported revenue minus $79bn of reported budget, because those two headlines each include films missing the other figure. The extract keeps films with at least 50 votes, which is the 9,672 titles, and is why 2024 onward looks thin. One row in the fact table is one film. Genre rows do not carry revenue.</p>
+          </li>
+          <li>
+            <h3>Baseline</h3>
+            <p>The naive read ranks every TMDB row and treats 0 as a real budget. That pulls averages down and sends a film with a blank budget to the top of an ROI table. After the null rule, the baseline for the scale of the business is the profit line: about $22bn in 2018 and $23bn in 2019, in years where revenue sits well above budget.</p>
+          </li>
+          <li>
+            <h3>Claim</h3>
+            <p>Profit falls to about $2bn in 2020 and then climbs back through the low tens of billions. Overall ROI on the both-known films is about 168%. That ratio is the wrong headline. Dividing by a very small budget puts Obsession, listed near $0.8M, and Animal World, listed near $0.1M, at the top of the table. The vote filter and the zero-to-null rule remove empty rows. They leave a doubtful small budget free to inflate ROI.</p>
+          </li>
+          <li>
+            <h3>Recommendation</h3>
+            <p>Publish the profit-by-year line. Rank ROI only inside a budget band, where a film like Ne Zha 2 can be compared with other large titles. Leave the unfiltered ROI table off any decision. The 2020 drop would be a missing-data artefact if the films without both figures were systematically the profitable ones. The same null rule runs every year, and in 2020 the revenue bar collapses with the budget bar.</p>
+          </li>
+        </ol>
+        <figure class="study-figure">
+          <img src="../assets/figures/movies-system.png" width="1789" height="993" alt="System diagram from the TMDB API through bronze JSON, DuckDB, dbt tests, and a Databricks publish into Power BI.">
+          <figcaption>The dbt tests sit in front of the publish. A failed test leaves the Databricks gold tables unchanged. The job runs weekly in Docker, on GitHub Actions, with an Airflow path for a local machine.</figcaption>
+        </figure>
+        <div class="case-links">
+          <a class="case-link" href="https://github.com/volam1311/Movie-Analysis" rel="noopener">GitHub</a>
+          <a class="case-link" href="https://app.powerbi.com/view?r=eyJrIjoiY2UyYzdlYjMtZWRmMy00ZTU4LTgyZTEtZjM1YWY1MTcwNmUxIiwidCI6ImVhNWI1ODBhLTIzMmEtNGUwNy05ZTJkLThjNjIwMGMxZDVmNCJ9" rel="noopener">Live dashboard</a>
+          <a class="case-link" href="../index.html#projects">All case studies</a>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> <span class="brand-name">Phuc Lam Vo</span> · Portfolio</p>
+      <a href="../index.html">Back to the portfolio</a>
+    </div>
+  </footer>
+</body>
+</html>

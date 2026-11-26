@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="A 36-trial cup experiment in R. Paper loses about 8°C less than ceramic over five minutes. R² = 0.998.">
+  <meta name="theme-color" content="#f5f7fa">
+  <title>Which cup keeps hot water hot? · Phuc Lam Vo</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">PLV</span>
+        <span class="brand-name">Phuc Lam Vo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav id="site-nav" class="nav-panel" aria-label="Primary">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#background">Background</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content" class="section" tabindex="-1">
+    <div class="wrap">
+      <a class="back-link" href="../index.html#projects">All case studies</a>
+      <article class="study">
+        <header class="study-head">
+          <p class="kicker">R · regression · ANOVA</p>
+          <h1>Which cup keeps hot water hot?</h1>
+          <p>A balanced 2×2×3 experiment, 36 trials, modelled with regression and ANOVA in R. The drink is scored five minutes after pouring.</p>
+        </header>
+        <figure class="study-figure">
+          <img src="../assets/figures/cup-type.png" width="2384" height="1788" alt="Box plot with raw points of temperature drop by cup type. Paper sits lower than ceramic, with little overlap.">
+          <figcaption>Temperature drop after five minutes, in °C. A higher value is more heat lost. Paper sits below ceramic, and the two boxes barely overlap. Each point is one of the 36 trials.</figcaption>
+        </figure>
+        <ol class="method">
+          <li>
+            <h3>Frame</h3>
+            <p>Choose the cup, the lid, and the fill if the drink should still be warm five minutes after it is poured.</p>
+          </li>
+          <li>
+            <h3>Audit</h3>
+            <p>The response is the change in °C from the reading at pour to the reading at five minutes. The factors were assigned, not observed: cup (ceramic or paper), lid (lid or none), and fill (100, 150, or 200 mL), with three replicates of each combination. That is 18 ceramic and 18 paper, 18 with a lid and 18 without, and 12 cups at each volume. One row is one trial.</p>
+          </li>
+          <li>
+            <h3>Baseline</h3>
+            <p>The reference cell is a ceramic cup with a lid, filled to 100 mL. Every coefficient is a difference from that cell over the same five minutes. Stepwise AIC kept the factorial model. R² = 0.998. The fit is that high because the experiment has a few assigned factors and little left over as noise. It is a description of these 36 trials, and a weak reason to trust the equation on a new cup in a café.</p>
+          </li>
+          <li>
+            <h3>Claim</h3>
+            <p>Holding the other factors at the reference: paper loses about 8°C less than ceramic, taking the lid off costs about 4.5°C, and 200 mL loses about 8.3°C less than 100 mL. The interaction plot looks nearly parallel, which reads as a weak interaction, and the ANOVA still marks the two-way and three-way terms significant. Both can be true here. With a designed experiment and R² this high, a small bend is detectable. The lines do not cross, so the order of the main effects stays put.</p>
+          </li>
+          <li>
+            <h3>Recommendation</h3>
+            <p>For the warmest drink after five minutes, use a paper cup, a lid, and a fuller cup. The paper-over-ceramic gap is the result to challenge. A cold ceramic wall takes heat from the water at the start. The next trial is the same comparison after the ceramic cup is preheated. If paper no longer wins, the 8°C was the cold cup.</p>
+          </li>
+        </ol>
+        <div class="case-links">
+          <a class="case-link" href="https://github.com/volam1311/Water-Temperature-Analyzer" rel="noopener">GitHub</a>
+          <a class="case-link" href="https://drive.google.com/file/d/1KeeSA3Wh5qqUMcALg0jWJhttERwO6RMR/view?usp=sharing" rel="noopener">Presentation</a>
+          <a class="case-link" href="../index.html#projects">All case studies</a>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> <span class="brand-name">Phuc Lam Vo</span> · Portfolio</p>
+      <a href="../index.html">Back to the portfolio</a>
+    </div>
+  </footer>
+</body>
+</html>

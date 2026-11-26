@@ -46,14 +46,11 @@
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">View case studies</a>
           <a class="btn btn-ghost" href="#contact">Contact</a>
+          <a class="btn btn-ghost" href="https://github.com/volam1311" rel="noopener">View GitHub profile</a>
         </div>
         <p class="availability">Open to internships</p>
       </div>
     </section>
-
-
-
-
 
     <section class="section" id="projects">
       <div class="wrap">
@@ -75,95 +72,146 @@
         </div>
         <div class="project-list">
           <article class="project" data-tags="python visual">
-            <p class="kicker">Python · scikit-learn</p>
-            <h3>Who should Sydney Bank call first?</h3>
-            <p>Ranked 1,600 customers by churn risk so a retention team could spend one list on people who already look like those who left.</p>
-            <dl class="kpis">
-              <div>
-                <dt>Base rate</dt>
-                <dd>18.6%</dd>
+            <a class="project-thumb" href="studies/sydney-bank.html">
+              <img src="assets/figures/churn-tenure.png" width="591" height="470" alt="Heatmap of churn rate by tenure and recent transactions. Short tenure and low activity is 40.1%.">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <p class="kicker">Python · scikit-learn</p>
+                <ul class="tags">
+                  <li>Python</li>
+                  <li>Visuals</li>
+                </ul>
               </div>
-              <div>
-                <dt>Top 10%</dt>
-                <dd>59%</dd>
+              <h3><a href="studies/sydney-bank.html">Who should Sydney Bank call first?</a></h3>
+              <p>Logistic regression ranks 1,600 customers for a 160-person call list. On held-out customers it reaches ROC-AUC 0.78, against 0.50 for an everyone-stays baseline. Group project: I led it and wrote the exploratory analysis and the report.</p>
+              <dl class="kpis">
+                <div>
+                  <dt>Base rate</dt>
+                  <dd>18.6%</dd>
+                </div>
+                <div>
+                  <dt>Top 10%</dt>
+                  <dd>59%</dd>
+                </div>
+                <div>
+                  <dt>Lift</dt>
+                  <dd>3.2×</dd>
+                </div>
+              </dl>
+              <div class="case-links">
+                <a class="case-link" href="studies/sydney-bank.html">Case study</a>
+                <a class="case-link" href="https://github.com/volam1311/Sydney-Bank-Churn-Prediction" rel="noopener">GitHub</a>
+                <a class="case-link" href="https://canva.link/qdbknwbdt6eaqwg" rel="noopener">Presentation</a>
               </div>
-              <div>
-                <dt>Lift</dt>
-                <dd>3.2×</dd>
-              </div>
-            </dl>
-            <div class="case case-links">
-              <a class="case-link" href="https://github.com/volam1311/Sydney-Bank-Churn-Prediction" rel="noopener">GitHub</a>
             </div>
           </article>
 
           <article class="project" data-tags="visual">
-            <p class="kicker">Power BI · DAX</p>
-            <h3>Which pizzas were carrying the menu?</h3>
-            <p>One year of orders for a pizza restaurant, modelled in Power BI, to see what to keep, what to review, and when the kitchen is busy.</p>
-            <dl class="kpis">
-              <div>
-                <dt>Revenue</dt>
-                <dd>$818K</dd>
+            <a class="project-thumb" href="studies/pizza-sales.html">
+              <img src="assets/figures/pizza-performance.png" width="1023" height="583" alt="Pizza sales dashboard. Brie Carre sold 490. XL and XXL are near zero next to Large at $0.38M.">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <p class="kicker">Power BI · DAX</p>
+                <ul class="tags">
+                  <li>Visuals</li>
+                </ul>
               </div>
-              <div>
-                <dt>Orders</dt>
-                <dd>21.35K</dd>
+              <h3><a href="studies/pizza-sales.html">Which pizzas were carrying the menu?</a></h3>
+              <p>One year of Maven Analytics sample orders, $818K in total. XL and XXL together are under $10K of that, so the decision was to drop those sizes and review Brie Carre.</p>
+              <dl class="kpis">
+                <div>
+                  <dt>Revenue</dt>
+                  <dd>$818K</dd>
+                </div>
+                <div>
+                  <dt>Orders</dt>
+                  <dd>21.35K</dd>
+                </div>
+                <div>
+                  <dt>XL and XXL</dt>
+                  <dd>&lt;$10K</dd>
+                </div>
+              </dl>
+              <div class="case-links">
+                <a class="case-link" href="studies/pizza-sales.html">Case study</a>
+                <a class="case-link" href="https://github.com/volam1311/Pizza-Sales-Analysis" rel="noopener">GitHub</a>
+                <a class="case-link" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZjRhYjFlMGQtYjYzOC00ZGJmLWE3ZTktMjJlNzExYWNlZjcwIiwidCI6ImVhNWI1ODBhLTIzMmEtNGUwNy05ZTJkLThjNjIwMGMxZDVmNCJ9" rel="noopener">Live dashboard</a>
               </div>
-              <div>
-                <dt>XL and XXL</dt>
-                <dd>&lt;$10K</dd>
-              </div>
-            </dl>
-            <div class="case case-links">
-              <a class="case-link" href="https://github.com/volam1311/Pizza-Sales-Analysis" rel="noopener">GitHub</a>
             </div>
           </article>
 
           <article class="project" data-tags="python sql visual">
-            <p class="kicker">Python · dbt · Power BI</p>
-            <h3>Where did movie profit actually sit?</h3>
-            <p>An ELT pipeline from the TMDB API into DuckDB and Databricks, then a Power BI report on 9,672 films released since 2018.</p>
-            <dl class="kpis">
-              <div>
-                <dt>Films</dt>
-                <dd>9,672</dd>
+            <a class="project-thumb is-focus-lower" href="studies/movie-pipeline.html">
+              <img src="assets/figures/movies-profit.png" width="1647" height="928" alt="Movie budget and revenue dashboard. Profit falls from about $23bn in 2019 to about $2bn in 2020.">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <p class="kicker">SQL · dbt · Python</p>
+                <ul class="tags">
+                  <li>SQL</li>
+                  <li>Python</li>
+                  <li>Visuals</li>
+                </ul>
               </div>
-              <div>
-                <dt>Profit</dt>
-                <dd>$118bn</dd>
+              <h3><a href="studies/movie-pipeline.html">Where did movie profit actually sit?</a></h3>
+              <p>Weekly ELT from TMDB. Missing budgets and revenues arrive as zeros and are stored as null, and profit is summed only where both figures exist. The read that survives that filter is the 2020 drop, from about $23bn to about $2bn.</p>
+              <dl class="kpis">
+                <div>
+                  <dt>Films</dt>
+                  <dd>9,672</dd>
+                </div>
+                <div>
+                  <dt>Profit</dt>
+                  <dd>$118bn</dd>
+                </div>
+                <div>
+                  <dt>ROI</dt>
+                  <dd>168%</dd>
+                </div>
+              </dl>
+              <div class="case-links">
+                <a class="case-link" href="studies/movie-pipeline.html">Case study</a>
+                <a class="case-link" href="https://github.com/volam1311/Movie-Analysis" rel="noopener">GitHub</a>
+                <a class="case-link" href="https://app.powerbi.com/view?r=eyJrIjoiY2UyYzdlYjMtZWRmMy00ZTU4LTgyZTEtZjM1YWY1MTcwNmUxIiwidCI6ImVhNWI1ODBhLTIzMmEtNGUwNy05ZTJkLThjNjIwMGMxZDVmNCJ9" rel="noopener">Live dashboard</a>
               </div>
-              <div>
-                <dt>ROI</dt>
-                <dd>168%</dd>
-              </div>
-            </dl>
-            <div class="case case-links">
-              <a class="case-link" href="https://github.com/volam1311/Movie-Analysis" rel="noopener">GitHub</a>
-              <a class="case-link" href="https://app.powerbi.com/view?r=eyJrIjoiY2UyYzdlYjMtZWRmMy00ZTU4LTgyZTEtZjM1YWY1MTcwNmUxIiwidCI6ImVhNWI1ODBhLTIzMmEtNGUwNy05ZTJkLThjNjIwMGMxZDVmNCJ9" rel="noopener">Live dashboard</a>
             </div>
           </article>
 
           <article class="project" data-tags="r visual">
-            <p class="kicker">R · regressionmodelling</p>
-            <h3>Which cup keeps hot water hot?</h3>
-            <p>A balanced experiment on cup type, lid, and fill volume, modelled in R, to see what actually slows heat loss over five minutes.</p>
-            <dl class="kpis">
-              <div>
-                <dt>Paper vs ceramic</dt>
-                <dd>−8°C</dd>
+            <a class="project-thumb" href="studies/cup-experiment.html">
+              <img src="assets/figures/cup-type.png" width="2384" height="1788" alt="Box plot of temperature drop after five minutes. Paper cups lose less heat than ceramic cups.">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <p class="kicker">R · regression</p>
+                <ul class="tags">
+                  <li>R</li>
+                  <li>Visuals</li>
+                </ul>
               </div>
-              <div>
-                <dt>No lid</dt>
-                <dd>+4.5°C</dd>
+              <h3><a href="studies/cup-experiment.html">Which cup keeps hot water hot?</a></h3>
+              <p>A 2×2×3 experiment, 36 trials. Over five minutes, paper loses about 8°C less than ceramic, and a lid saves about 4.5°C. R² = 0.998 because the factors were assigned and there were only a few of them.</p>
+              <dl class="kpis">
+                <div>
+                  <dt>Paper vs ceramic</dt>
+                  <dd>−8°C</dd>
+                </div>
+                <div>
+                  <dt>No lid</dt>
+                  <dd>+4.5°C</dd>
+                </div>
+                <div>
+                  <dt>Variance fit</dt>
+                  <dd>99.8%</dd>
+                </div>
+              </dl>
+              <div class="case-links">
+                <a class="case-link" href="studies/cup-experiment.html">Case study</a>
+                <a class="case-link" href="https://github.com/volam1311/Water-Temperature-Analyzer" rel="noopener">GitHub</a>
+                <a class="case-link" href="https://drive.google.com/file/d/1KeeSA3Wh5qqUMcALg0jWJhttERwO6RMR/view?usp=sharing" rel="noopener">Presentation</a>
               </div>
-              <div>
-                <dt>Variance fit</dt>
-                <dd>99.8%</dd>
-              </div>
-            </dl>
-            <div class="case case-links">
-              <a class="case-link" href="https://github.com/volam1311/Water-Temperature-Analyzer" rel="noopener">GitHub</a>
             </div>
           </article>
         </div>
@@ -217,7 +265,7 @@
           <p class="index">03</p>
           <div>
             <h2>Skills</h2>
-            <p class="lede">Tools from the case studies, plus languages from the degree</p>
+            <p class="lede">Tools that show up in the case studies</p>
           </div>
         </header>
         <div class="skill-grid">
@@ -239,8 +287,6 @@
               <li>SQL</li>
               <li>R</li>
               <li>JavaScript</li>
-              <li>Java</li>
-              <li>C#</li>
             </ul>
           </article>
           <article class="skill">
@@ -248,9 +294,6 @@
             <p>Train a model, then keep it only if it beats a baseline.</p>
             <ul class="chips">
               <li>scikit-learn</li>
-              <li>PyTorch</li>
-              <li>Hugging Face</li>
-              <li>OpenAI API</li>
             </ul>
           </article>
           <article class="skill">
@@ -268,6 +311,7 @@
             </ul>
           </article>
         </div>
+        <p class="skill-aside">From coursework, not yet a case study: Java, C#, PyTorch, Hugging Face, and the OpenAI API.</p>
       </div>
     </section>
     <section class="section band" id="approach">
@@ -291,17 +335,17 @@
           </li>
           <li>
             <span class="step-num">03</span>
-            <h3>Analyse</h3>
+            <h3>Baseline</h3>
             <p>Start with a baseline, then one comparison that could overturn it.</p>
           </li>
           <li>
             <span class="step-num">04</span>
-            <h3>Show</h3>
+            <h3>Claim</h3>
             <p>One claim per chart, with the unit, the window, and the sample.</p>
           </li>
           <li>
             <span class="step-num">05</span>
-            <h3>Recommend</h3>
+            <h3>Recommendation</h3>
             <p>Say what to try next, and what result would prove you wrong.</p>
           </li>
         </ol>
@@ -327,7 +371,7 @@
             </li>
             <li>
               <span>Based</span>
-              <strong>Brisbane, VietNam</strong>
+              <strong>Brisbane, Australia</strong>
             </li>
             <li>
               <span>Status</span>

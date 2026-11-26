@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="A Power BI read of one year of pizza orders: drop XL and XXL, and review Brie Carre.">
+  <meta name="theme-color" content="#f5f7fa">
+  <title>Which pizzas were carrying the menu? · Phuc Lam Vo</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">PLV</span>
+        <span class="brand-name">Phuc Lam Vo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav id="site-nav" class="nav-panel" aria-label="Primary">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#background">Background</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content" class="section" tabindex="-1">
+    <div class="wrap">
+      <a class="back-link" href="../index.html#projects">All case studies</a>
+      <article class="study">
+        <header class="study-head">
+          <p class="kicker">Power BI · DAX</p>
+          <h1>Which pizzas were carrying the menu?</h1>
+          <p>One year of orders for a fictional pizza restaurant, modelled in Power BI, to decide what to take off the menu and when to staff the kitchen. The file is the Maven Analytics Pizza Place sample, so the levels are a worked example.</p>
+        </header>
+        <figure class="study-figure">
+          <img src="../assets/figures/pizza-performance.png" width="1023" height="583" alt="Performance page of the pizza dashboard. Brie Carre sold 490 pizzas. Sales by size show Large at $0.38M and XL and XXL near zero.">
+          <figcaption>Least-sold names, and revenue by size. Brie Carre is 490 pizzas. Every other name in that list is still around 930 to 1,000. Large is $0.38M. XL is about $0.01M and XXL rounds to zero on the chart.</figcaption>
+        </figure>
+        <ol class="method">
+          <li>
+            <h3>Frame</h3>
+            <p>Two decisions. Which sizes and names come off the menu, and which hours need more people in the kitchen.</p>
+          </li>
+          <li>
+            <h3>Audit</h3>
+            <p>Four tables. An order line is one pizza on one order. Orders, pizzas, and pizza types sit behind that line, so revenue is quantity times price and a pizza is counted in one category. Power Query promoted the pizza-type header and added hour and weekday from the order timestamp. The load had no missing rows. The year is a teaching dataset, not a live store.</p>
+          </li>
+          <li>
+            <h3>Baseline</h3>
+            <p>The starting menu keeps every size and every name. The year is $818K across 21,350 orders and 49,570 pizzas. Large is $0.38M, Medium $0.25M, and Small $0.18M. Classic, Supreme, Chicken, and Veggie each sit near $0.2M, so category is not where a cut shows up.</p>
+          </li>
+          <li>
+            <h3>Claim</h3>
+            <p>XL and XXL together are under $10K of that $818K, about 1% of the year, against $380K for Large. Brie Carre sold 490 pizzas. The next-lowest names still sold about 930 to 1,000. Orders peak at 12–1 PM, about $112K in that hour across the year, and again at 5–7 PM, near $89K. Mid-afternoon drops to about $53K.</p>
+          </li>
+          <li>
+            <h3>Recommendation</h3>
+            <p>Drop XL and XXL. Review Brie Carre before the next menu print, and keep the kitchen stocked for Classic Deluxe and Barbecue Chicken. Staff up for lunch and early evening. A later year in which XL and XXL clear a few percent of revenue would put those sizes back. This file cannot run that check.</p>
+          </li>
+        </ol>
+        <figure class="study-figure">
+          <img src="../assets/figures/pizza-sales.png" width="1015" height="570" alt="Sales page with orders by hour. Volume peaks around midday and again in the early evening.">
+          <figcaption>Orders by hour. The kitchen is busiest at lunch, 12–1 PM, and again in the early evening, 5–7 PM. The quiet stretches are early morning and late evening.</figcaption>
+        </figure>
+        <div class="case-links">
+          <a class="case-link" href="https://github.com/volam1311/Pizza-Sales-Analysis" rel="noopener">GitHub</a>
+          <a class="case-link" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZjRhYjFlMGQtYjYzOC00ZGJmLWE3ZTktMjJlNzExYWNlZjcwIiwidCI6ImVhNWI1ODBhLTIzMmEtNGUwNy05ZTJkLThjNjIwMGMxZDVmNCJ9" rel="noopener">Live dashboard</a>
+          <a class="case-link" href="../index.html#projects">All case studies</a>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> <span class="brand-name">Phuc Lam Vo</span> · Portfolio</p>
+      <a href="../index.html">Back to the portfolio</a>
+    </div>
+  </footer>
+</body>
+</html>
